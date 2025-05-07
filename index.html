@@ -13,11 +13,35 @@
             <h1 class="green-color">random password</h1>
             <p class="site-description">Never use an insecure password again</p>
 
+            <div class="controls-wrapper">
+                <div class="input-group-inline">
+                    <label for="password-length">Length (5–25):</label>
+                    <input type="number" id="password-length" class="password-input" min="5" max="15">
+                </div>
+            
+                <div class="toggle-row">
+                    <label class="toggle">
+                        <input type="checkbox" id="include-symbols" checked>
+                        <span class="slider"></span>
+                        <span class="toggle-label">Symbols</span>
+                    </label>
+            
+                    <label class="toggle">
+                        <input type="checkbox" id="include-numbers" checked>
+                        <span class="slider"></span>
+                        <span class="toggle-label">Numbers</span>
+                    </label>
+                </div>
+            </div>
+            
+                   
+            <hr>
             <button onclick="generatePassword()">Generate passwords</button>
             <hr>
+
             <div class="password-container">
-                <p class="password-1" id="password-one-el"></p>
-                <p class="password-2" id="password-two-el"></p>
+                <p class="password-1" id="password-one-el" onclick="copyToClipboard('password-one-el')"></p>
+                <p class="password-2" id="password-two-el" onclick="copyToClipboard('password-two-el')"></p>
             </div>
             
             
